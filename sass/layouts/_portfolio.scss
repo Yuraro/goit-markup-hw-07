@@ -1,0 +1,123 @@
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.all-btn {
+    margin-bottom: 50px;
+
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.portfolio-btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.625;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    cursor: pointer;
+    background: #F5F4FA;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 22px 6px 22px;
+
+    transition-property: background-color, box-shadow, border-radius, color;
+    transition-duration: var(--t-d);
+    transition-timing-function: var(--t-t-f);
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+    background-color: #2196F3;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+
+.portfolio-uplist {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.portfolio-list {
+    transition-property: box-shadow;
+    transition-duration: var(--t-d);
+    transition-timing-function: var(--t-t-f);
+}
+
+.portfolio-list:hover,
+.portfolio-list:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-list:hover .portfolio-uptext,
+.portfolio-list:focus .portfolio-uptext {
+    transform: translateY(0%);
+}
+
+.portfolio-list:hover .portfolio-block::after,
+.portfolio-list:focus .portfolio-block::after {
+    transform: translateY(-100%);
+}
+
+.portfolio-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-block::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(33, 150, 243, 0.9);
+    width: 100%;
+    height: 100%;
+    transform: translateY(0%);
+
+    transition-property: transform;
+    transition-duration: var(--t-d);
+    transition-timing-function: var(--t-t-f);
+}
+
+.portfolio-uptext {
+    font-size: 18px;
+    line-height: 1.5555;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+
+    position: absolute;
+    top: 63px;
+    left: 24px;
+    bottom: 63px;
+    right: 24px;
+    transform: translateY(134%);
+    z-index: 1;
+
+    transition-property: transform;
+    transition-duration: var(--t-d);
+    transition-timing-function: var(--t-t-f);
+}
+
+.under-photo {
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+}
+
+.portfolio-title {
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--title-color);
+}
+
+.portfolio-text {
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    color: var(--subtitle-color);
+}
