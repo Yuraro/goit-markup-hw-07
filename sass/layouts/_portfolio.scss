@@ -29,14 +29,14 @@
     transition-property: background-color, box-shadow, border-radius, color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
-}
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-    background-color: #2196F3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    color: #FFFFFF;
+    &:hover,
+    &:focus {
+        background-color: #2196F3;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        color: #FFFFFF;
+    }
 }
 
 .portfolio-uplist {
@@ -49,29 +49,23 @@
     transition-property: box-shadow;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
-}
 
-.portfolio-list:hover,
-.portfolio-list:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.portfolio-list:hover .portfolio-uptext,
-.portfolio-list:focus .portfolio-uptext {
-    transform: translateY(0%);
-}
-
-.portfolio-list:hover .portfolio-block::after,
-.portfolio-list:focus .portfolio-block::after {
-    transform: translateY(-100%);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .portfolio-block {
     position: relative;
     overflow: hidden;
-}
 
-.portfolio-block::after {
+    .portfolio-list:hover &::after,
+    .portfolio-list:focus &::after {
+        transform: translateY(-100%);
+    }
+
+    &::after {
     content: "";
     position: absolute;
     background-color: rgba(33, 150, 243, 0.9);
@@ -82,6 +76,7 @@
     transition-property: transform;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+    }
 }
 
 .portfolio-uptext {
@@ -101,6 +96,11 @@
     transition-property: transform;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+
+    .portfolio-list:hover &,
+    .portfolio-list:focus & {
+        transform: translateY(0%);
+    }
 }
 
 .under-photo {

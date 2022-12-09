@@ -18,9 +18,6 @@
     pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(2);
-}
 
 .modal {
     position: absolute;
@@ -38,6 +35,10 @@
     transition-property: transform;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(2);
+        }
 }
 
 .modal-btn {
@@ -57,11 +58,11 @@
 
 .modal-close-icon {
     fill: #000000;
-}
 
-.modal-btn:hover .modal-close-icon,
-.modal-btn:focus .modal-close-icon {
-    fill: var(--blue-active-color);
+    .modal-btn:hover &,
+    .modal-btn:focus & {
+            fill: var(--blue-active-color);
+        }
 }
 
 .modal-title {
@@ -108,11 +109,12 @@
     transition-property: border-color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+
+    &:focus {
+        border-color: var(--blue-active-color);
+        }
 }
 
-.modal-upbox:focus {
-    border-color: var(--blue-active-color);
-}
 
 .modal-icon {
     position: absolute;
@@ -123,11 +125,12 @@
     transition-property: fill;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+    
+    .modal-upbox:focus+& {
+            fill: var(--blue-active-color);
+        }
 }
 
-.modal-upbox:focus+.modal-icon {
-    fill: var(--blue-active-color);
-}
 
 .comment {
     font-weight: 400;
@@ -153,10 +156,10 @@
     transition-property: border-color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
-}
 
-.comment-box:focus {
-    border-color: var(--blue-active-color);
+    &:focus {
+        border-color: var(--blue-active-color);
+        }
 }
 
 .checkbox {
@@ -197,11 +200,11 @@
     height: 15px;
     background-image:
         url(../images/checkbox-off.svg);
-}
 
-.agree-box:checked+.checkbox-icon {
-    background-image:
-        url(../images/checkbox-on.svg);
+        .agree-box:checked+& {
+            background-image:
+                url(../images/checkbox-on.svg);
+            }
 }
 
 .link-in-agree {

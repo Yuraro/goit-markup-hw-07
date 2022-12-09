@@ -71,6 +71,11 @@
     transition-property: background-color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+
+    &:hover,
+    &:focus {
+        background-color: var(--blue-active-color);
+    }
 }
 
 .team-soc-icon {
@@ -78,14 +83,9 @@
     transition-property: fill;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
-}
 
-.team-soc-link:hover,
-.team-soc-link:focus {
-    background-color: var(--blue-active-color);
-}
-
-.team-soc-link:hover .team-soc-icon,
-.team-soc-link:focus .team-soc-icon {
-    fill: #FFFFFF;
+    .team-soc-link:hover &,
+    .team-soc-link:focus & {
+        fill: #FFFFFF;
+    }
 }

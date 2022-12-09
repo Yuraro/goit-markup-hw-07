@@ -34,12 +34,12 @@
     transition-property: color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+        &:hover,
+        &:focus {
+            color: var(--blue-active-color);
+        }
 }
 
-.header-nav-link:hover,
-.header-nav-link:focus {
-    color: var(--blue-active-color);
-}
 
 .header-is-active {
     position: relative;
@@ -114,6 +114,10 @@
     transition-property: color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+        &:hover,
+        &:focus {
+            color: var(--blue-active-color);
+        }
 }
 
 .header-soc-icon {
@@ -122,17 +126,16 @@
     transition-property: fill;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+        .header-nav-address:hover &,
+        .header-nav-address:focus & {
+            fill: var(--blue-active-color);
+        }
+        .header-nav-contact:hover &,
+        .header-nav-contact:focus & {
+            fill: var(--blue-active-color);
+        }
 }
 
-.header-nav-address:hover,
-.header-nav-address:focus {
-    color: var(--blue-active-color);
-}
-
-.header-nav-address:hover .header-soc-icon,
-.header-nav-address:focus .header-soc-icon {
-    fill: var(--blue-active-color);
-}
 
 .header-nav-contact {
     font-weight: 500;
@@ -145,14 +148,8 @@
     transition-property: color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
-}
-
-.header-nav-contact:hover,
-.header-nav-contact:focus {
-    color: var(--blue-active-color);
-}
-
-.header-nav-contact:hover .header-soc-icon,
-.header-nav-contact:focus .header-soc-icon {
-    fill: var(--blue-active-color);
+        &:hover,
+        &:focus {
+            color: var(--blue-active-color);
+        }
 }

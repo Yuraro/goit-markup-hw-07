@@ -75,15 +75,14 @@
     transition-property: background-color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+        &:hover,
+        &:focus {
+            background-color: var(--blue-active-color);
+        }
 }
 
 .footer-soc-icon {
     fill: #FFFFFF;
-}
-
-.footer-soc-link:hover,
-.footer-soc-link:focus {
-    background-color: var(--blue-active-color);
 }
 
 .footer-send {

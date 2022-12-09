@@ -35,6 +35,10 @@
     transition-property: border-color;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
+    &:hover,
+    &:focus {
+            border-color: #2196F3;
+        }
 }
 
 .custom-icon {
@@ -42,14 +46,8 @@
     transition-property: fill;
     transition-duration: var(--t-d);
     transition-timing-function: var(--t-t-f);
-}
-
-.custom-link:hover,
-.custom-link:focus {
-    border-color: #2196F3;
-}
-
-.custom-link:hover .custom-icon,
-.custom-link:focus .custom-icon {
-    fill: var(--blue-active-color);
+    .custom-link:hover &,
+    .custom-link:focus & {
+            fill: var(--blue-active-color);
+        }
 }
