@@ -3,16 +3,16 @@
     padding-bottom: 94px;
 }
 
-.about-uplist {
+.about__uplist {
     display: flex;
     gap: 30px;
 }
 
-.about-list {
+.about__uplist__list {
     flex-basis: calc((100% - 90px) / 4);
 }
 
-.about-title {
+.about__uplist__title {
     font-size: 14px;
     line-height: 1.1428;
     letter-spacing: 0.03em;
@@ -21,14 +21,14 @@
     margin-bottom: 10px;
 }
 
-.about-subtitle {
+.about__uplist__subtitle {
     font-size: 14px;
     line-height: 1.7142;
     letter-spacing: 0.03em;
     color: var(--subtitle-color);
 }
 
-.about-link {
+.about__uplist__item {
     width: 270px;
     height: 120px;
     background: #F5F4FA;

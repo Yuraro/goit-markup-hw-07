@@ -2,7 +2,7 @@
     padding-bottom: 94px;
 }
 
-.example-title {
+.example__title {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
@@ -11,12 +11,12 @@
     margin-bottom: 50px;
 }
 
-.example-list {
+.example__list {
     display: flex;
     justify-content: space-between;
 }
 
-.example-item {
+.example__list__item {
     position: relative;
     &::after {
         content: "";
@@ -28,7 +28,7 @@
         }
 }
 
-.example-text {
+.example__list__item__text {
     font-size: 14px;
     line-height: 1.1428;
     text-align: center;
